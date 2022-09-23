@@ -16,7 +16,7 @@ git config --global user.email "$email"
 
 read -r -p "Do you want to add ssh credentials for git? [y/n] " answer
 case $answer in 
-    "yY" )      echo "Configuring git ssh access..."
+    [yY] )      echo "Configuring git ssh access..."
                 ssh-keygen -t ed25519 -C "$email"
                 echo -en "This is your public key.\n"
                 echo -en "\tTo activate it in github, got to settings,\n" 
