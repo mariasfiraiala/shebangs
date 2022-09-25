@@ -2,12 +2,17 @@
 
 press_enter()
 {
+    # might as well use:
+    # read -p "Press Enter to continue " enter
+
     echo -en "\nPress Enter to continue"
     read
     clear
 }
 
 selection=
+
+# Let the user do whatever they want until they don't want anything anymore
 
 until [ "$selection" = "0" ]; do
     echo "
