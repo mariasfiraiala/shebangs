@@ -10,6 +10,12 @@ Until I get a better idea regarding the organization of this section, this READM
 
 ### Get the total lines of code in a directory, excluding the secret files
 
-```bash
-find . -type f \( ! -iname ".*" \) -exec wc -l {} \; | awk '{ total += $1 } END {print total}'
+```console
+$ find . -type f \( ! -iname ".*" \) -exec wc -l {} \; | awk '{ total += $1 } END {print total}'
+```
+
+### Change extension for all text files (robust)
+
+```console
+$ find . -type f -name "*.txt" -exec rename 's/\.txt$/.csv/' '{}' \;
 ```
